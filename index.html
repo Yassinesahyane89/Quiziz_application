@@ -51,6 +51,41 @@
 			<button id="startquiz" onclick="ProgressBarCheck()">Start</button>
 		</div>
 	<!-- ================== END Information Page ================== -->
+	<!-- ================== BEGIN Questionnaire Page ================== -->
+		<div class="quiz-container" id="Questionnairequiz">
+			<div class="quiz-header">
+				<h2 id="question">Question</h2>
+				<ul>
+					<li>
+						<input type="radio" id="a" name="answer" class="answer" />
+						<label id="answer_a" for="a">Answer</label>
+					</li>
+					<li>
+						<input
+							type="radio" id="b" name="answer" class="answer" />
+						<label id="answer_b" for="b">Answer</label>
+					</li>
+					<li>
+						<input type="radio" id="c" name="answer" class="answer" />
+						<label id="answer_c" for="c">Answer</label>
+					</li>
+					<li>
+						<input type="radio" id="d" name="answer" class="answer" />
+						<label id="answer_d" for="d">Answer</label>
+					</li>
+				</ul>
+			</div>
+			<div class="ProgressBar" id="ProgressBar">
+				<div class="prog" id="prog"></div>
+			</div>
+			<div class="fotter">
+				<div class="Etat-quiz">
+					<p>Q<span id="questionNumber">1</span>/<span id="total_question">0</span> </i><span class="time-question"><i class="fa-solid fa-clock"></i><span id="second_time">00</span></span></p>
+				</div>
+				<button id="submitQuiz">Submit</button>
+			</div>
+		</div>
+	<!-- ================== END Questionnaire Page ================== -->
 	<!-- ================== BEGIN core-js ================== -->
 	<script src="assets/js/vendor.min.js"></script>
 	<script src="assets/js/app.min.js"></script>

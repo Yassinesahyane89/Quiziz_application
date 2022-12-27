@@ -157,4 +157,41 @@ ul li label {
   font-size: 1.2rem;
 }
 
+.fotter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 1.3rem;
+}
+.fotter button {
+  background-color: #ec7211;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+}
+.fotter button:hover {
+  background-color: #732d91;
+}
+.fotter button:focus {
+  background-color: #5e3370;
+  outline: none;
+}
+.fotter .Etat-quiz {
+  padding: 0 1rem;
+}
+.fotter .time-question {
+  margin: 0 1rem;
+}
+.fotter .current-question {
+  padding: 0 3px;
+}
+.fotter .total_question {
+  padding-left: 3px;
+}
+
 /*# sourceMappingURL=style.css.map */

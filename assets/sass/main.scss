@@ -161,3 +161,47 @@ ul {
         font-size: 1.2rem;
     }
 }
+
+.fotter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 1.3rem;
+
+    button {
+        background-color: #ec7211;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.6rem 1.4rem;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #732d91;
+        }
+
+        &:focus {
+            background-color: #5e3370;
+            outline: none;
+        }
+    }
+
+    .Etat-quiz{
+        padding: 0 1rem;
+    }
+
+    .time-question{
+        margin: 0 1rem;
+    }
+
+    .current-question{
+        padding: 0 3px;
+    }
+
+    .total_question{
+        padding-left: 3px;
+    }
+}
