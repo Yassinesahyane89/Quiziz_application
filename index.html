@@ -86,6 +86,58 @@
 			</div>
 		</div>
 	<!-- ================== END Questionnaire Page ================== -->
+	<!-- ================== BEGIN Result Page ================== -->
+		<div class="tableau-bd" id="tableresult">
+			<h2>Table for Result</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Question</th>
+						<th>Your answer</th>
+						<th>Correction</th>
+						<th>More detail</th>
+					</tr>
+				</thead>
+				<tbody class="result_quiz">
+
+				</tbody>
+			</table>
+		</div>
+	<!-- ================== END Result Page ================== -->
+	<!-- ================== START TASK MODAL ================== -->
+		<div class="modal fade" id="modal">
+			<!-- Modal content goes here -->
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="quiz-header">
+						<h2 id="question_corr">Question</h2>
+						<ul>
+							<li id="a_corr_answer">
+								<input type="radio" id="a_corr" name="answer" class="answer" />
+								<label id="answer_a_corr" for="a">Answer</label>
+							</li>
+							<li id="b_corr_answer">
+								<input type="radio" id="b_corr" name="answer" class="answer" />
+								<label id="answer_b_corr" for="b">Answer</label>
+							</li>
+							<li id="c_corr_answer">
+								<input type="radio" id="c_corr" name="answer" class="answer" />
+								<label id="answer_c_corr" for="c">Answer</label>
+							</li>
+							<li id="d_corr_answer">
+								<input type="radio" id="d_corr" name="answer" class="answer" />
+								<label id="answer_d_corr" for="d">Answer</label>
+							</li>
+						</ul>
+					</div>
+					<div class="fotter">
+						<h2 id="question_corr">Explination</h2>
+						<p id="explan_corr"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- ================== END TASK MODAL ================== -->
 	<!-- ================== BEGIN core-js ================== -->
 	<script src="assets/js/vendor.min.js"></script>
 	<script src="assets/js/app.min.js"></script>

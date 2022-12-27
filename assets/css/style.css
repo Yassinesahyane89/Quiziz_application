@@ -194,4 +194,37 @@ ul li label {
   padding-left: 3px;
 }
 
+.tableau-bd {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 75%;
+  display: none;
+}
+.tableau-bd table {
+  width: 100%;
+  padding: 1.8rem;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.tableau-bd table tr {
+  background-color: #fff;
+  height: 3rem;
+}
+.tableau-bd tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid #c8ccd1;
+  border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+  color: #677483;
+}
+.tableau-bd tbody tr:last-child td {
+  border: none;
+}
+
+.modal-dialog {
+  max-width: 82%;
+}
+
+/* ================== End main Page ================== */
+
 /*# sourceMappingURL=style.css.map */
