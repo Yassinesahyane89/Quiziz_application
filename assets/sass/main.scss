@@ -113,3 +113,51 @@ body {
     margin-bottom: 4px;
  }
 /* ================== END Stepper Component ================== */
+/* ================== BEGIN main Page ================== */
+.quiz-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 70%;
+}
+
+h2 {
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #c8ccd1;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        padding: 1rem 0 1rem 2rem;
+        label {
+            cursor: pointer;
+        }
+    }
+}
+
+.startpage{
+    button {
+        background-color: #ec7211;
+        color: #fff;
+        border: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-family: inherit;
+        padding: 1.3rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+    }
+}
