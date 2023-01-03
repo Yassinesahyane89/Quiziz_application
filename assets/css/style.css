@@ -16,28 +16,41 @@ body h1 {
   font-size: 2.5rem;
   padding-bottom: 2rem;
   color: #ec7211;
+  text-align: center;
+}
+@media only screen and (max-width: 880px) {
+  body h1 {
+    font-size: 1.5rem;
+  }
 }
 
 /* ================== BEGIN Stepper Component ================== */
+.ProgressBar, .progress-container::before {
+  content: "";
+  background-color: #e0e0e0;
+  transform: translateY(-50%);
+  height: 9px;
+  width: 100%;
+  z-index: -1;
+}
+
 .progress-container {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-bottom: 30px;
-  max-width: 100%;
   width: 70%;
+}
+@media only screen and (max-width: 440px) {
+  .progress-container {
+    width: 90%;
+  }
 }
 
 .progress-container::before {
-  content: "";
-  background-color: #e0e0e0;
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-  height: 7px;
-  width: 100%;
-  z-index: -1;
 }
 
 .progress {
@@ -46,28 +59,7 @@ body h1 {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  height: 7px;
-  width: 0%;
-  z-index: -1;
-  transition: 0.4s ease;
-}
-
-.ProgressBar {
-  content: "";
-  background-color: #e0e0e0;
-  transform: translateY(-50%);
-  height: 10px;
-  width: 100%;
-  z-index: -1;
-}
-
-.prog {
-  background-color: #ec7211;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 10px;
+  height: 9px;
   width: 0%;
   z-index: -1;
   transition: 0.4s ease;
@@ -92,25 +84,6 @@ body h1 {
   color: white;
 }
 
-.steps {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3rem;
-  gap: 1rem;
-}
-
-.steps p {
-  margin-top: 4px;
-}
-
-.laststeps {
-  align-items: flex-end;
-}
-
-.laststeps p {
-  margin-bottom: 4px;
-}
-
 /* ================== END Stepper Component ================== */
 /* ================== BEGIN main Page ================== */
 .quiz-container {
@@ -119,12 +92,27 @@ body h1 {
   box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
   width: 70%;
 }
+@media only screen and (max-width: 880px) {
+  .quiz-container {
+    width: 92%;
+  }
+}
 
 h2 {
   padding: 2rem 1rem;
   text-align: center;
   border-bottom: 3px solid #c8ccd1;
   margin: 0;
+}
+@media only screen and (max-width: 880px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 637px) {
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 ul {
@@ -135,6 +123,11 @@ ul li {
   font-size: 1.2rem;
   margin: 1rem 0;
   padding: 1rem 0 1rem 2rem;
+}
+@media only screen and (max-width: 637px) {
+  ul li {
+    font-size: 0.8rem;
+  }
 }
 ul li label {
   cursor: pointer;
@@ -161,9 +154,7 @@ ul li label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: inherit;
   font-size: 1.1rem;
-  width: 100%;
   padding: 1.3rem;
 }
 .fotter button {
@@ -199,21 +190,20 @@ ul li label {
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
   width: 75%;
-  display: none;
+}
+@media only screen and (max-width: 880px) {
+  .tableau-bd {
+    width: 92%;
+  }
 }
 .tableau-bd table {
   width: 100%;
-  padding: 1.8rem;
   text-align: center;
-  transition: all 300ms ease;
 }
 .tableau-bd table tr {
-  background-color: #fff;
   height: 3rem;
 }
 .tableau-bd tbody td {
-  height: 2.8rem;
-  border-bottom: 1px solid #c8ccd1;
   border-bottom: 1px solid rgba(132, 139, 200, 0.18);
   color: #677483;
 }

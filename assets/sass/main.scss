@@ -1,45 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #f5f7fa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
 
-  h1{
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
-    color: #ec7211;
-  }
+    h1{
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+        color: #ec7211;
+        text-align: center;
+        @media only screen and (max-width: 880px) {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 /* ================== BEGIN Stepper Component ================== */
+%progressbar{
+    content: '';
+    background-color:#e0e0e0;
+    transform: translateY(-50%);
+    height: 9px;
+    width: 100%;
+    z-index: -1;
+}
+
 .progress-container {
     display: flex;
     justify-content: space-between;
     position: relative;
     margin-bottom: 30px;
-    max-width: 100%;
     width: 70%;
+    @media only screen and (max-width: 440px) {
+        width: 90%;
+    }
 }
 
 .progress-container::before {
-    content: '';
-    background-color:#e0e0e0;
+    @extend %progressbar;
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
-    height: 7px;
-    width: 100%;
-    z-index: -1;
 }
 
 .progress {
@@ -48,31 +58,14 @@ body {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    height: 7px;
+    height: 9px;
     width: 0%;
     z-index: -1;
     transition: 0.4s ease;
 }
 
 .ProgressBar{
-    content: '';
-    background-color:#e0e0e0;
-    transform: translateY(-50%);
-    height: 10px;
-    width: 100%;
-    z-index: -1;
-}
-
-.prog{
-    background-color: #ec7211;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 10px;
-    width: 0%;
-    z-index: -1;
-    transition: 0.4s ease;
+    @extend %progressbar;
 }
 
 .circle {
@@ -93,25 +86,6 @@ body {
     background-color: #ec7211;
     color: white;
 }
-
-.steps{
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-    gap: 1rem;
-}
-
-.steps p{
-    margin-top: 4px;
-}
-
-.laststeps{
-    align-items:flex-end;
-}
-
-.laststeps p{
-    margin-bottom: 4px;
- }
 /* ================== END Stepper Component ================== */
 /* ================== BEGIN main Page ================== */
 .quiz-container {
@@ -119,6 +93,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 70%;
+    @media only screen and (max-width: 880px) {
+        width: 92%;
+    }
 }
 
 h2 {
@@ -126,6 +103,12 @@ h2 {
     text-align: center;
     border-bottom: 3px solid #c8ccd1;
     margin: 0;
+    @media only screen and (max-width: 880px) {
+        font-size: 1.3rem;
+    }
+    @media only screen and (max-width: 637px) {
+        font-size: 1rem;
+    }
 }
 
 ul {
@@ -136,6 +119,9 @@ ul {
         font-size: 1.2rem;
         margin: 1rem 0;
         padding: 1rem 0 1rem 2rem;
+        @media only screen and (max-width: 637px) {
+            font-size: 0.8rem;
+        }
         label {
             cursor: pointer;
         }
@@ -150,8 +136,10 @@ ul {
         display: block;
         width: 100%;
         cursor: pointer;
-        font-size: 1.1rem;
-        font-family: inherit;
+        font : {
+            size: 1.1rem;
+            family: inherit;
+        }
         padding: 1.3rem;
     }
 
@@ -166,9 +154,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: inherit;
     font-size: 1.1rem;
-    width: 100%;
     padding: 1.3rem;
 
     button {
@@ -211,23 +197,19 @@ ul {
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 75%;
-    display: none;
+    @media only screen and (max-width: 880px) {
+        width: 92%;
+    }
     table{
         width: 100%;
-        padding: 1.8rem;
         text-align: center;
-        transition: all 300ms ease;
         tr{
-            background-color: #fff;
             height: 3rem;
-            
         }
     }
     tbody{
 
         td{
-            height: 2.8rem;
-            border-bottom: 1px solid #c8ccd1;
             border-bottom: 1px solid rgba(132, 139,200,  0.18);
             color: #677483;
         }

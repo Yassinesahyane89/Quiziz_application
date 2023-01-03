@@ -83,9 +83,9 @@ let currentQuiz=0;
 function Showdata() {
     prevquestion.push(questionindex);
 
-    clearInterval(myInterval);
-    timeanswer = 30;
-    myInterval = setInterval(countdown, 1000);
+    // clearInterval(myInterval);
+    // timeanswer = 30;
+    // myInterval = setInterval(countdown, 1000);
     prog.style.width = ((currentQuiz + 1) / quizData.length) * 100 + "%";
 
     Titlepage.innerHTML = "AWS Cloud Practitioner Knowledge Test ";
